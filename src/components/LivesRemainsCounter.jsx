@@ -1,7 +1,7 @@
 import {useLivesRemains} from "../data/hooks/useLivesRemains.js";
 
 export const LivesRemainsCounter = () => {
-    let {data: items, isStale} = useLivesRemains();
+    let {data: items} = useLivesRemains();
 
     if (!items) {
         items = 0;

@@ -1,7 +1,7 @@
 export class WordLetter {
-    constructor(id, title, isRight) {
+    constructor(id, letter, isRight) {
         this.id = id;
-        this.title = title;
+        this.letter = letter;
         this.isRight = isRight;
     }
 }

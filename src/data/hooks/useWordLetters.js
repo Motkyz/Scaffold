@@ -22,8 +22,8 @@ export const useWordLetters = () => {
 export const useCheckWordLetter = () => {
     const client = useQueryClient();
     return useMutation({
-        mutationFn: (title) => {
-            return checkWordLetterInLocalStorage(title);
+        mutationFn: (letter) => {
+            return checkWordLetterInLocalStorage(letter);
         },
         onSuccess: () => {
             client.invalidateQueries(['word_letters'])

@@ -69,9 +69,9 @@ export const checkWordLetterInLocalStorage = (letter) => {
             return getWordLettersFromLocalStorage().then((wordLetters) => {
                 let isRight = false;
                 const newWordLetters = wordLetters.map(wordLetter => {
-                    if (wordLetter.title === letter) {
+                    if (wordLetter.letter === letter) {
                         isRight = true;
-                        return new WordLetter(wordLetter.id, wordLetter.title, true);
+                        return new WordLetter(wordLetter.id, wordLetter.letter, true);
                     }
                     return wordLetter;
                 })
@@ -95,7 +95,7 @@ export const setLivesRemainsToLocalStorage = (count) => {
 export const getLivesRemainsFromLocalStorage = () => {
     return new Promise((resolve, reject) => {
         const defaultLivesRemains = 0;
-        const rawData = JSON.parse(localStorage.getItem(LIVES_REMAINS_LOCAL_STORAGE_KEY));
+        const rawData = localStorage.getItem(LIVES_REMAINS_LOCAL_STORAGE_KEY);
 
         if (!rawData) {
             resolve(defaultLivesRemains);

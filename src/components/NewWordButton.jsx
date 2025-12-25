@@ -1,7 +1,7 @@
 import {useCreateWordLetters} from "../data/hooks/useWordLetters.js";
 
 export const NewWordButton = () => {
-    const {mutate: onCreateClick, isPending} = useCreateWordLetters();
+    const {mutate: onCreateClick} = useCreateWordLetters();
 
     return (
         <>

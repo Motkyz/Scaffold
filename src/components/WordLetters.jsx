@@ -3,7 +3,7 @@ import {Spinner} from "./Spinner";
 import {WordLetter} from "./WordLetter.jsx";
 
 export const WordLetters = () => {
-    const {data: items, isLoading, isStale} = useWordLetters();
+    const {data: items, isLoading} = useWordLetters();
 
     if (isLoading || !items) {
         return <Spinner />
